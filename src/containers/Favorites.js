@@ -3,6 +3,8 @@ import { ProductsContext } from "../context/products-context";
 import FavoriteItem from "../components/Favorites/FavoriteItem";
 import "./Products.css";
 
+//useContext is best for low frequency state changes like login and log out
+//not cart management and favorite and unfavorite
 const Favorites = (props) => {
   const favoriteProducts = useContext(ProductsContext).products.filter(
     (p) => p.isFavorite
