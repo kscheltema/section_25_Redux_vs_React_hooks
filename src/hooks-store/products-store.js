@@ -4,13 +4,17 @@ const configureStore = () => {
   const actions = {
     TOGGLE_FAV: (curState, productID) => {
       const prodIndex = curState.products.findIndex((p) => p.id === productID);
+      // console.log(prodIndex); looking for naming error
       const newFavStatus = !curState.products[prodIndex].isFavorite;
+      // console.log(newFavStatus);
       const updatedProducts = [...curState.products];
+      // console.log("before", updatedProducts);
       updatedProducts[prodIndex] = {
         ...curState.products[prodIndex],
         isFavorite: newFavStatus,
       };
-      return { product: updatedProducts };
+      // console.log("after", updatedProducts);
+      return { products: updatedProducts };
     },
   };
 
