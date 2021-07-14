@@ -4,7 +4,8 @@ import ProductItem from "../components/Products/ProductItem";
 import "./Products.css";
 
 const Products = (props) => {
-  const state = useStore()[0]; //[0] refers to state other element dispatch+
+  const state = useStore()[0];
+  //[0] refers to state other element dispatch
   // console.log(state); found a naming error here
   return (
     <ul className="products-list">
