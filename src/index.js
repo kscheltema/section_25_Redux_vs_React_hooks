@@ -5,7 +5,7 @@ import "./index.css";
 import App from "./App";
 import configureProductsStore from "./hooks-store/products-store";
 
-configureProductsStore();
+configureProductsStore(); //no wrapper needed just call it here
 
 ReactDOM.render(
   <BrowserRouter>

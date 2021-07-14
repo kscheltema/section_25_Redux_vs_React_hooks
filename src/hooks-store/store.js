@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 let globalState = {};
 let listeners = []; //will run when an component updates, that imports this
-let actions = {};
+let actions = {}; //hook and its data is shared with imported components
 
 export const useStore = (shouldListen = true) => {
   const setState = useState(globalState)[1];
