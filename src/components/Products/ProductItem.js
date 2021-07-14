@@ -29,3 +29,7 @@ const ProductItem = React.memo((props) => {
 });
 
 export default ProductItem;
+
+//context api more efficient for low frequency updates
+//custom hooks to save every byte
+//alternative redux with a bit larger load
