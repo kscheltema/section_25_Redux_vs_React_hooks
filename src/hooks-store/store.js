@@ -16,14 +16,16 @@ export const useStore = (shouldListen = true) => {
   };
 
   useEffect(() => {
-    //will run when said component mounts
+    //will run when said component mounts not all the time
     if (shouldListen) {
       listeners.push(setState);
     }
 
     return () => {
       //cleanup function for the listener
-      listeners = listeners.filter((li) => li !== setState);
+      if (shouldListen) {
+        listeners = listeners.filter((li) => li !== setState);
+      }
     };
   }, [setState, shouldListen]); //one dependancy that never changes
 

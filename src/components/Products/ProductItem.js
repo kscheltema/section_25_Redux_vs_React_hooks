@@ -4,6 +4,7 @@ import Card from "../UI/Card";
 import "./ProductItem.css";
 
 const ProductItem = React.memo((props) => {
+  //react memo helps react to re-render if props changes
   const dispatch = useStore(false)[1];
 
   const toggleFavHandler = () => {
